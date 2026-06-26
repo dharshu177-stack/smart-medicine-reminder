@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Edit Medicine</title>
+</head>
+
+<body>
+
+<h2>Edit Medicine</h2>
+
+<form th:action="@{/update}" th:object="${medicine}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+
+    <label>Medicine Name</label><br>
+    <input type="text" th:field="*{medicineName}"><br><br>
+
+    <label>Dosage</label><br>
+    <input type="text" th:field="*{dosage}"><br><br>
+
+    <label>Reminder Time</label><br>
+    <input type="time" th:field="*{reminderTime}"><br><br>
+
+    <button type="submit">Update Medicine</button>
+
+</form>
+
+</body>
+</html>
